@@ -447,17 +447,16 @@ describe('ECDSA', function() {
   });
 
   it('should deterministically generate private key', function() {
-    var curve = elliptic.curves.secp256k1;
+    var curve = elliptic.curves.p256;
     assert(curve);
 
     var ecdsa = new elliptic.ec(curve);
     var keys = ecdsa.genKeyPair({
-      pers: 'my.pers.string',
-      entropy: hash.sha256().update('hello world').digest()
+        rand:[11, 113, 48, 133, 45, 228, 104, 107, 210, 66, 147, 79, 213, 42, 76, 173, 3, 6, 18, 67, 114, 255, 190, 20, 29, 11, 165, 10, 175, 166, 138, 115, 48, 33, 78, 178, 25, 245, 191, 107, 46, 25, 20, 19, 137, 221, 54, 11, 150, 20, 101, 184, 195, 236, 54, 26, 74, 234, 20, 135, 143, 84, 44, 43]
     });
     assert.equal(
-      keys.getPrivate('hex'),
-      '6160edb2b218b7f1394b9ca8eb65a72831032a1f2f3dc2d99291c2f7950ed887');
+        keys.getPrivate('hex'),
+        '26fbbb9bd4b3bc0605d040f2312edf50bef5b8c96d82c01214647d6ee81f1c');
   });
 
   it('should recover the public key from a signature', function() {

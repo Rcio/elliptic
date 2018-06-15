@@ -41,18 +41,19 @@
     "grunt-contrib-uglify": "^1.0.1",
     "grunt-mocha-istanbul": "^3.0.1",
     "grunt-saucelabs": "^8.6.2",
-    "istanbul": "^0.4.2",
-    "jscs": "^2.9.0",
+    "istanbul": "^0.4.5",
+    "jscs": "^2.11.0",
     "jshint": "^2.6.0",
-    "mocha": "^2.1.0"
+    "mocha": "^2.5.3"
   },
   "dependencies": {
-    "bn.js": "^4.4.0",
+    "bn": "^1.0.1",
+    "bn.js": "^4.11.8",
     "brorand": "^1.0.1",
     "hash.js": "^1.0.0",
     "hmac-drbg": "^1.0.0",
     "inherits": "^2.0.1",
-    "minimalistic-assert": "^1.0.0",
-    "minimalistic-crypto-utils": "^1.0.0"
+    "minimalistic-assert": "^1.0.1",
+    "minimalistic-crypto-utils": "^1.0.1"
   }
 }
